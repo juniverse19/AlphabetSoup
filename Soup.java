@@ -34,9 +34,8 @@ letters = letters + word;
 
 
     //Use Math.random() to get a random character from the letters string and return it.
-    public char randomLetter(){
-        "blargblorg".charAt (int)(Math.random()*letters.length());
-        return 'a';
+    public char randomLetter() {
+        return letters.charAt((int)(Math.random()*letters.length()));
     }
 
 
