@@ -1,3 +1,8 @@
+//Name: Ryan K
+//Date: 9/29/25
+//Description: This program will produce words in soup that will only contain 
+//letters that spell out specific words
+
 public class Soup {
     //these are instance variables 
     private String letters;
@@ -42,13 +47,17 @@ letters = letters + word;
     //returns the letters currently stored with the company name placed directly in the center of all
     //the letters
     public String companyCentered(){
-        return "";
+        int middleOfLetters = letters.length() / 2;
+        String firstHalf = letters.substring(0, middleOfLetters);
+        String secondHalf = letters.substring(middleOfLetters);
+
+    return firstHalf + company + secondHalf;
     }
 
 
     //should remove the first available vowel from letters. If there are no vowels this method has no effect.
     public void removeFirstVowel(){
-        
+        letters = letters.replaceFirst("[AEIOUaeiou]", "");
     }
 
     //should remove "num" letters from a random spot in the string letters. You may assume num never exceeds the length of the string.
